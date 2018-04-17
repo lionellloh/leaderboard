@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import pymysql
+# import pymysql
 import jinja2
 # from flask.ext import mysql
 from werkzeug import generate_password_hash, check_password_hash
@@ -18,15 +18,15 @@ def main():
 @app.route("/showSignUp")
 def showSignUp():
 	return render_template('signup.html')
-
-@app.route("/leaderboard", methods = ["GET"])
-def someName():
-	cursor = db.cursor()
-	sql = "SELECT * FROM Users"
-	cursor.execute(sql)
-	results = cursor.fetchall()
-	print(results)
-	return render_template('leaderboard.html', results=results)
+#
+# @app.route("/leaderboard", methods = ["GET"])
+# def someName():
+# 	cursor = db.cursor()
+# 	sql = "SELECT * FROM Users"
+# 	cursor.execute(sql)
+# 	results = cursor.fetchall()
+# 	print(results)
+# 	return render_template('leaderboard.html', results=results)
 	# return render_template('leaderboard.html')
 
 # @app.route("/signUp", methods=['POST'])
