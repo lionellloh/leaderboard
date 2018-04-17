@@ -5,6 +5,7 @@ import jinja2
 from werkzeug import generate_password_hash, check_password_hash
 from db_interface import *
 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = pymysql.connect(host = "127.0.0.1", user = "root", passwd = "lionell123", db = "smartbin", port = 3306)
 
 app = Flask(__name__)
