@@ -1,23 +1,24 @@
 from flask import Flask, render_template, request
-# import pymysql
-import jinja2
-# from flask.ext import mysql
-from werkzeug import generate_password_hash, check_password_hash
-from db_interface import *
+# # import pymysql
+# import jinja2
+# # from flask.ext import mysql
+# from werkzeug import generate_password_hash, check_password_hash
+# from db_interface import *
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-db = pymysql.connect(host = "127.0.0.1", user = "root", passwd = "lionell123", db = "smartbin", port = 3306)
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+# db = pymysql.connect(host = "127.0.0.1", user = "root", passwd = "lionell123", db = "smartbin", port = 3306)
 
 app = Flask(__name__)
 # api = Api(app)
 
 @app.route("/")
 def main():
-	return render_template('index.html')
+	return "heroku deployed!"
+	# return render_template('index.html')
 
-@app.route("/showSignUp")
-def showSignUp():
-	return render_template('signup.html')
+# @app.route("/showSignUp")
+# def showSignUp():
+# 	return render_template('signup.html')
 #
 # @app.route("/leaderboard", methods = ["GET"])
 # def someName():
